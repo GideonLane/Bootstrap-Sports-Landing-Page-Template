@@ -16,12 +16,70 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-color: var(--primary);
     outline: solid 2px lightblue;
 }
 html {
+    scroll-behavior: smooth;
+    max-height: 100vh;
+    overflow: auto;
+    scroll-padding-top: 35px;
+}
+.navbar,
+section,
+footer {
     background-color: var(--primary);
 }
+
+/*Navbar Section*/
+
+/*Main Section*/
 .main_image {
     filter: brightness(80%);
+}
+input[type="tel"],
+input[type="email"] {
+    width: 100%;
+}
+#fig-text {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    background-color: transparent;
+    color: var(--shadow);
+    font-size: clamp(20px, 3vw, 40px);
+}
+#fig-btn {
+    position: absolute;
+    text-wrap: nowrap;
+    top: 35%;
+    left: 41%;
+    width: 15%;
+    height: 7%;
+    text-align: center;
+    justify-content: center;
+    font-size: clamp(4px, 2vw, 20px);
+}
+
+/*Card Section*/
+
+/*Learning Section*/
+.learn-item {
+    margin-top: clamp(10px, 4vw, 80px);
+    font-size: 20px;
+}
+
+/*Trainer Section*/
+
+
+/*Contact Section*/
+.contact-icon {
+    font-size: clamp(15px, 3vw, 20px);
+}
+
+/*Hours Section*/
+
+
+/*Footer Section*/
+.copyright {
+    font-size: clamp(5px, 3vw, 20px);
 }
