@@ -2,21 +2,20 @@
 /*font-family: "Poppins", sans-serif;*/
 
 :root {
-    --primary:     #FAF0CA;
-    --secondary:   #F4D35E;
-    --light-ocean: #1c73c4;
-    --ocean:       #10477a;
-    --shadow:      #081e33;
-    --text-color:  #030a11;
-    --white:       rgb(233, 227, 203);
-    --tone:        #EE964B;
+    --primary:     rgb(250, 240, 202);
+    --secondary:   rgb(219, 190, 85);
+    --light-ocean: rgba(62, 143, 219, 0.70);
+    --ocean:       rgb(16, 71, 122);
+    --shadow:      rgba(8, 30, 51, 0.7);
+    --text-color:  rgb(28, 39, 63);
+    --white:       rgb(233, 227, 200);
+    --tone:        rgba(0, 0, 0, 0.180);
 }
+/*General Styles*/
 * {
-    font-family: "Poppins", sans-serif;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    outline: solid 2px lightblue;
 }
 html {
     scroll-behavior: smooth;
@@ -24,17 +23,64 @@ html {
     overflow: auto;
     scroll-padding-top: 35px;
 }
-.navbar,
 section,
 footer {
     background-color: var(--primary);
 }
+option,
+label,
+#nav-link,
+.navbar-brand,
+.modal-title,
+.level-tag,
+.card-header,
+.card-text,
+.trainer-header,
+.contact-header,
+.hours,
+.footer {
+    color: var(--text-color);
+    font-family: "Poppins", sans-serif;
+    transition: .1s ease-in-out;
+}
+
+#fig-btn,
+#nav-btn {
+    text-wrap: nowrap;
+    border-radius: 20px;
+    background-color: var(--light-ocean);
+    color: white;
+    box-shadow: 1px 1px 5px var(--shadow);
+}
 
 /*Navbar Section*/
-
+.navbar {
+    background-image: linear-gradient(var(--secondary), var(--primary));
+}
+#nav-btn:hover {
+    background-color: var(--secondary);
+}
+#nav-link:hover {
+    text-shadow: 2px 2px 10px var(--secondary);
+    color: black;
+    transform: scale(1.1);
+}
+.navbar-brand:hover {
+    transform: scale(1.1);
+    text-shadow: 2px 2px 10px var(--secondary);
+}
 /*Main Section*/
 .main_image {
     filter: brightness(80%);
+}
+#fig-btn:hover {
+    background-color: var(--secondary);
+}
+@media only screen and (max-width: 1200px) {
+    #fig-btn {
+        visibility: hidden;
+    }
+    
 }
 input[type="tel"],
 input[type="email"] {
@@ -45,7 +91,7 @@ input[type="email"] {
     top: 20%;
     left: 40%;
     background-color: transparent;
-    color: var(--shadow);
+    color: var(--text-color);
     font-size: clamp(20px, 3vw, 40px);
 }
 #fig-btn {
@@ -60,24 +106,104 @@ input[type="email"] {
     font-size: clamp(4px, 2vw, 20px);
 }
 
+/*Forum Modal*/
+.modal-body {
+    background-color: var(--primary);
+}
+.modal-header,
+.level-container,
+.modal-footer {
+    background-color: var(--light-ocean);
+}
+.level-container {
+    margin-top: 20px;
+    border-radius: 5px;
+}
+input[type="email"],
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    margin-top: 10px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid var(--tone);
+    padding: 5px;
+}
+.level-tag,
+.modal-title {
+    display: block;
+    font-size: 25px;
+    margin: 20px 0 20px 20px;
+    font-weight: 500;
+    color: white;
+}
+#radioContainer {
+    margin: 10px 0 20px 0;
+}
+#daySelect,
+#timeSelect {
+    margin-bottom: 20px;
+}
+button[type="button"] {
+    color: white;
+    background-color: var(--light-ocean);
+    border: none;
+}
+button[type="button"]:hover {
+    background-color: var(--secondary);
+    color: white;
+}
 /*Card Section*/
-
-/*Learning Section*/
-.learn-item {
-    margin-top: clamp(10px, 4vw, 80px);
-    font-size: 20px;
+.card {
+    border: 3px solid var(--light-ocean);
+    box-shadow: 2px 2px 10px var(--shadow);
+    border-radius: 30px 5px;
+    background-color: var(--tone);
+}
+#cardImage{
+    border: 3px solid var(--light-ocean);
+    border-radius: 0;
+}
+.card-header {
+    text-align: center;
+}
+.card-text {
+    text-align: center;
 }
 
+/*Learning Section*/
+.learning {
+    background-image: linear-gradient(var(--shadow), var(--light-ocean));
+}
+.learn-header {
+    color: var(--primary);
+    text-shadow: 2px 2px 15px var(--text-color);
+}
+.learn-item {
+    margin-top: clamp(10px, 4vw, 80px);
+    font-size: clamp(10px, 3vw, 25px);
+    color: var(--primary);
+    text-shadow: 2px 2px 15px var(--text-color);
+}
+#learnImage {
+    margin-top: 20px;
+    border-radius: 20px;
+    border: 3px solid var(--shadow);
+    box-shadow: 2px 2px 20px var(--shadow);
+}
 /*Trainer Section*/
-
+#cardImageTrainer {
+    border: 3px solid var(--light-ocean);
+    border-radius: 20px 0 0 0;
+}
 
 /*Contact Section*/
 .contact-icon {
     font-size: clamp(15px, 3vw, 20px);
 }
-
-/*Hours Section*/
-
+.fa-solid {
+    color: var(--text-color);
+}
 
 /*Footer Section*/
 .copyright {

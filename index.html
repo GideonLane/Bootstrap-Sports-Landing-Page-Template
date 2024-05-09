@@ -31,22 +31,22 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                   <li class="nav-item">
-                    <a class="nav-link pt-3 pb-3 ps-5 pe-5 fs-5" href="#main">Home</a>
+                    <a class="nav-link pt-3 pb-3 ps-5 pe-5 fs-5" id="nav-link" href="#main">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link pt-3 pb-3 ps-5 pe-5 fs-5" href="#card_section">Classes</a>
+                    <a class="nav-link pt-3 pb-3 ps-5 pe-5 fs-5" id="nav-link" href="#card_section">Classes</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link pt-3 pb-3 ps-5 pe-5 fs-5" href="#learning">Learning</a>
+                    <a class="nav-link pt-3 pb-3 ps-5 pe-5 fs-5" id="nav-link" href="#learning">Learning</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link pt-3 pb-3 ps-5 pe-5 fs-5" href="#trainers">Coaches</a>
+                    <a class="nav-link pt-3 pb-3 ps-5 pe-5 fs-5" id="nav-link" href="#trainers">Coaches</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link pt-3 pb-3 ps-5 pe-5 fs-5" href="#contact">Contact</a>
+                    <a class="nav-link pt-3 pb-3 ps-5 pe-5 fs-5" id="nav-link" href="#contact">Contact</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link pt-3 pb-3 ps-5 pe-5 fs-5" data-bs-toggle="modal" data-bs-target="#signupModal" href="#">Sign Up</a>
+                    <a class="nav-link pt-2 pb-2 ps-5 pe-5 fs-5" id="nav-btn" data-bs-toggle="modal" data-bs-target="#signupModal" href="#">Sign Up</a>
                   </li>
                 </ul>
               </div>
@@ -62,7 +62,7 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="signupModal">Sign up Here</h1>
+            <h1 class="modal-title" id="signupModal">Sign up Here</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -96,12 +96,12 @@
                   <input type="tel" id="phone" name="phone" placeholder="Phone Number">
                 </div>
               </div>
-              <div class="row">
+              <div class="level-container row">
                 <div class="col-sm-12 col-lg-4">
                   <h5 class="level-tag">Select Your Level</h5>
                 </div>
               </div> 
-              <div class="row">
+              <div class="row" id="radioContainer">
                 <div class="col-sm-12 col-lg-4">
                   <input type="radio" class="form-check-input" id="beginner" name="radioLevel" value="yes">
                   <label for="beginner" class="form-check-lable">Beginner</label>
@@ -174,14 +174,14 @@
 
     <!--Card Section-->
     <section class="card_section" id="card_section">
-      <div class="container pt-5">
+      <div class="container p-5">
         <div class="row">
           <div class="col-sm-12 col-md-4">
             <div class="card m-4 w-auto">
               <div class="card-header">
                 <h2>Rent a Board</h2>
               </div>
-              <img src="assets/images/card-1.jpg" class="card-img-top" alt="...">
+              <img src="assets/images/card-1.jpg" class="card-img-top" id="cardImage" alt="...">
               <div class="card-body">
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quaerat accusantium! Debitis voluptates.</p>
               </div>
@@ -192,18 +192,18 @@
               <div class="card-header">
                 <h2>Take Classes</h2>
               </div>
-              <img src="assets/images/card-2.png" class="card-img-top" alt="...">
+              <img src="assets/images/card-2.png" class="card-img-top" id="cardImage" alt="...">
               <div class="card-body">
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quaerat accusantium! Debitis voluptates.</p>
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col-sm-12 col-md-4">
             <div class="card m-4 w-auto">
               <div class="card-header">
                 <h2>Enjoy the Waves</h2>
               </div>
-              <img src="assets/images/card-3.jpg" class="card-img-top" alt="...">
+              <img src="assets/images/card-3.jpg" class="card-img-top" id="cardImage" alt="...">
               <div class="card-body">
                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, quaerat accusantium! Debitis voluptates.</p>
               </div>
@@ -214,11 +214,11 @@
     </section>
 
     <!--Learning Section-->
-    <section class="learning" id="learning">
-      <div class="container p-5">
+    <section class="learning p-5" id="learning">
+      <div class="container">
         <div class="row">
           <div class="col m-3 text-center">
-            <h2>Learn About Our Services</h2>
+            <h2 class="learn-header">Learn About Our Services</h2>
           </div>
         </div>
         <div class="row">
@@ -232,7 +232,7 @@
             </ul>
         </div>
           <div class="col">
-            <img class="img-fluid" src="assets/images/chalking.png" alt="">
+            <img class="img-fluid" id="learnImage" src="assets/images/chalking.png" alt="">
           </div>
         </div>
       </div>
@@ -243,13 +243,13 @@
       <div class="container p-5">
         <div class="row">
           <div class="col text-center m-2">
-            <h1>Meet Our Instructors</h1>
+            <h1 class="trainer-header">Meet Our Instructors</h1>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12 col-md-6 col-lg-3">
             <div class="card m-4 w-auto">
-              <img src="assets/images/trainer-one.jpg" class="card-img-top" alt="...">
+              <img src="assets/images/trainer-one.jpg" class="card-img-top" id="cardImageTrainer" alt="...">
               <div class="card-body">
                 <p class="card-text text-center">Name is a great instructor for beginner level sports from preparing equipment to getting started in the building blocks.</p>
               </div>
@@ -257,7 +257,7 @@
           </div>
           <div class="col-sm-12 col-md-6 col-lg-3">
             <div class="card m-4 w-auto">
-              <img src="assets/images/trainer-two.png" class="card-img-top" alt="...">
+              <img src="assets/images/trainer-two.png" class="card-img-top" id="cardImageTrainer" alt="...">
               <div class="card-body">
                 <p class="card-text text-center">Name is a great instructor for intermediate level sports from preparing equipment to building a foundation for learning.</p>
               </div>
@@ -265,7 +265,7 @@
           </div>
           <div class="col-sm-12 col-md-6 col-lg-3">
             <div class="card m-4 w-auto">
-              <img src="assets/images/trainer-three.png" class="card-img-top" alt="...">
+              <img src="assets/images/trainer-three.png" class="card-img-top" id="cardImageTrainer" alt="...">
               <div class="card-body">
                 <p class="card-text text-center">Name is a great instructor for advanced level sports from maintaing equipment to building a foundation for deeper learning.</p>
               </div>
@@ -273,7 +273,7 @@
           </div>
           <div class="col">
             <div class="card m-4 w-auto">
-              <img src="assets/images/trainer-four.png" class="card-img-top" alt="...">
+              <img src="assets/images/trainer-four.png" class="card-img-top" id="cardImageTrainer" alt="...">
               <div class="card-body">
                 <p class="card-text text-center">Name is a great instructor for extra techniques to building foundations for deeper learning and sport conditions.</p>
               </div>
@@ -287,8 +287,8 @@
     <section class="contact" id="contact">
       <div class="container">
         <div class="row">
-          <div class="col text-center m-2">
-            <h1>Contact</h1>
+          <div class="col text-center m-5">
+            <h1 class="contact-header">Contact</h1>
           </div>
         </div>
         <div class="row">
@@ -323,7 +323,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col">
+          <div class="col mt-2">
             <h2>Saturday</h2>
           </div>
         </div>
@@ -333,7 +333,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col">
+          <div class="col mt-2">
             <h2>Sunday</h2>
           </div>
         </div>
